@@ -140,8 +140,8 @@ nav{
 section{
     position: relative;
     top:5rem;
-    background-image: url(/Assets/Image/lynx_in_space.webp), url(
-        /Assets/Image/background_in_space.webp);
+    background-image: url( /W3Schools-Clone/Assets/Image/lynx_in_space.webp), url(
+        /W3Schools-Clone/Assets/Image/background_in_space.webp);
         height: 400px;
         background-repeat: no-repeat, repeat;
         background-position: 90% 60%, center, center;
@@ -725,7 +725,7 @@ svg{
 
 footer{
     padding-top: 3rem;
-    background-image: url(/Assets/Image/background_in_space.webp);
+    background-image: url( /W3Schools-Clone/Assets/Image/background_in_space.webp);
     display: flex;
     align-items: center;
     justify-content: center;
