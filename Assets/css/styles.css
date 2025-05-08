@@ -836,111 +836,147 @@ footer{
     src: url(/Assets/fonts/SourceSansPro-Regular.otf);
 }
 
+/* =============== MEDIA QUERIES =============== */
+/* Mobile Menu Styles */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: #04AA6D;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+}
 
-/* Media Queries for Responsive Design */
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 47px;
+    left: 0;
+    width: 100%;
+    background: white;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
 
-/* Tablets and smaller desktops (max-width: 1024px) */
-@media screen and (max-width: 1024px) {
-    header {
-        flex-direction: column;
-        padding: 1rem;
-    }
-    .header-logo {
-        margin-bottom: 0.5rem;
-    }
-    .header-item-wrapper ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 0.5rem;
-    }
-    .right-wrapper ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 0.5rem;
-    }
-    .nav-item-wrapper {
-        padding: 0.3rem;
-    }
-    .nav-item-wrapper a {
-        font-size: 9px;
-        padding: 0.2rem 0.4rem;
-    }
+.mobile-menu ul {
+    list-style: none;
+}
+
+.mobile-menu li {
+    padding: 10px 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.mobile-menu a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+.mobile-menu a:hover {
+    color: #04AA6D;
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
     .section-item-left {
         padding-left: 50px;
     }
-    .section-2 {
-        flex-direction: column;
-        height: auto;
-        padding: 2rem;
-    }
-    .section-item-right {
-        margin-top: 1rem;
-    }
-    .big-box-wrapper {
-        flex-direction: column;
-        padding: 2rem;
-    }
-    .big-box {
-        flex: 1 1 100%;
-    }
-    .just2container {
-        flex-direction: column;
-        padding: 2rem;
-    }
-    .w3-last {
-        flex-direction: column;
-        padding: 2rem;
-    }
-    .box1 {
-        flex: 1 1 100%;
-    }
-    .section-11 {
-        flex-direction: column;
-        padding: 2rem;
-    }
-    .section-11-img {
-        align-items: center;
-    }
-    .footer-column-container {
-        flex-direction: column;
-        gap: 2rem;
-        padding: 0 2rem;
+    .section-8-img {
+        width: 800px;
+        height: 500px;
     }
 }
 
-/* Mobile devices (max-width: 768px) */
-@media screen and (max-width: 768px) {
-    .header-item-wrapper ul {
-        flex-direction: column;
-        gap: 0.3rem;
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+    .header-item-wrapper {
+        display: none;
     }
-    .right-wrapper ul {
-        flex-direction: column;
-        gap: 0.3rem;
+    
+    .mobile-menu-btn {
+        display: block;
     }
-    .header-search {
+    
+    .mobile-menu.active {
+        display: block;
+    }
+    
+    .section-item-wrapper.section-2 {
+        flex-direction: column;
+        height: auto;
+        padding: 40px 20px;
+    }
+    .section-item-left, .section-item-right {
         width: 100%;
-        max-width: 300px;
-        margin: 0.5rem auto;
+        padding: 0;
+        margin-bottom: 30px;
     }
-    .header-sign-log {
+    .section-item-right {
+        max-width: 600px;
+    }
+    .section-8-img {
+        width: 600px;
+        height: 400px;
+    }
+    .section-11 {
         flex-direction: column;
-        gap: 0.5rem;
+        align-items: center;
     }
+    .section-11-img {
+        margin-top: 30px;
+    }
+    .footer-column-container {
+        gap: 3rem;
+    }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
     nav {
-        top: 100px;
-    }
-    .nav-item-wrapper a {
-        font-size: 8px;
-        padding: 0.2rem 0.3rem;
+        top: 47px;
     }
     section {
-        padding: 2rem 1rem;
-        background-position: 80% 50%;
-        height: auto;
+        top: 5rem;
+        background-position: 50% 60%, center, center;
     }
+    .big-box-wrapper, .just2container {
+        padding: 3rem 1.5rem;
+    }
+    .big-box {
+        flex: 1 1 100%;
+        margin-bottom: 20px;
+    }
+    .box1 {
+        flex: 1 1 45%;
+        padding: 2rem;
+    }
+    .section-8-img {
+        width: 100%;
+        height: auto;
+        padding-left: 0;
+    }
+    .footer-header-wrapper {
+        flex-wrap: wrap;
+        gap: 0;
+    }
+    .footer-header-wrapper li {
+        flex: 1 1 50%;
+        text-align: center;
+    }
+    .footer-bottom {
+        padding: 1rem;
+    }
+    .footer-bottom p {
+        padding: 0;
+    }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
     .learntocode {
-        font-size: 30px;
+        font-size: 35px;
     }
     .learntocode2 {
         font-size: 16px;
@@ -948,97 +984,33 @@ footer{
     .search-tutorial {
         max-width: 300px;
     }
-    .section-item-left {
-        padding-left: 0;
-    }
     .HTML-title {
         font-size: 50px;
     }
+    .box1 {
+        flex: 1 1 100%;
+    }
     .section-7, .section-8, .section-9, .section-10 {
-        padding: 2rem 1rem;
+        padding: 3rem 1rem;
     }
-    .section-7-img, .section-8-img {
-        padding: 1rem;
+    .section-7 h2, .section-9 h2, .section-10-item h2 {
+        font-size: 30px;
     }
-    .section-8-img {
-        width: 100%;
-        height: auto;
-    }
-    .section-10 {
-        height: auto;
-    }
-    .footer-header-wrapper {
-        flex-direction: column;
-        gap: 1rem;
-    }
-    .footer-header-wrapper li a {
-        padding: 0.5rem;
-    }
-    .footer-bottom {
-        padding: 1rem;
+    .footer-column {
+        flex: 1 1 100%;
+        margin-bottom: 20px;
     }
 }
 
-/* Small mobile devices (max-width: 480px) */
-@media screen and (max-width: 480px) {
-    .header-logo {
-        width: 24px;
-        height: 24px;
-    }
-    .header-item-wrapper li a {
-        padding: 0.5rem;
-        font-size: 12px;
-    }
-    .right-wrapper li a {
-        padding: 0.5rem;
-        font-size: 12px;
-    }
-    .search-tutorial input {
-        font-size: 12px;
-    }
-    .search-tutorial button {
-        width: 30%;
-    }
-    .learntocode {
-        font-size: 24px;
-    }
-    .learntocode2 {
-        font-size: 14px;
-    }
-    .section-needhelp {
-        font-size: 16px;
-    }
-    .HTML-title {
-        font-size: 40px;
-    }
-    .htmlintro {
-        font-size: 14px;
-    }
-    .box {
-        width: 120px;
-        padding: 10px 0;
-        font-size: 12px;
+/* Very small devices (small phones) */
+@media (max-width: 375px) {
+    .search-tutorial {
+        max-width: 250px;
     }
     .try-button {
         width: 60%;
-        padding: 8px;
-        font-size: 14px;
     }
-    .section-7 h2, .section-8 h2, .section-9 h2, .section-10 h2 {
-        font-size: 30px;
-    }
-    .section-7 p, .section-8 p, .section-9 p {
-        font-size: 14px;
-    }
-    .w3-space {
-        width: 200px;
-        padding: 10px 0;
-    }
-    .footer-column li a {
-        font-size: 8px;
-    }
-    .footer-bottom p {
-        font-size: 8px;
-        padding: 0 1rem;
+    .section-7-img, .section-8-img {
+        padding: 1rem 0;
     }
 }
